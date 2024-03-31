@@ -37,7 +37,7 @@ jobs:
           EC2_HOST: ${{ secrets.EC2_HOST }}
           EC2_USERNAME: ${{ secrets.EC2_USERNAME }}
         run: |
-          ssh -f -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_HOST "./ddos2/actions-runner/run.sh > /dev/null 2>&1 &"
+          ssh -f -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_HOST "./new2/actions-runner/run.sh > /dev/null 2>&1 &"
       - name: Clean up SSH key 🚀
         if: always()
         run: rm -f ~/.ssh/id_rsa
